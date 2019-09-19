@@ -2,13 +2,13 @@ class Song
 
   attr_accessor :name, :artist, :genre
 
-  @@song_count = 0
+  
   @@count = 0
   @@artists = []
   @@genres = []
 
   def initialize(name, artist, genre)
-    @@song_count += 1
+  
     @name = name
     @genre = genre
     @artist = artist
@@ -31,11 +31,11 @@ class Song
 
     def self.genre_count
       genre_count  = {}
-      @@genres.each do |genre|
-        if genre_count[genre]
-          genre_count[genre] += 1
+      @@genres.each do |x|
+        if genre_count[x]
+          genre_count[x] += 1
         else
-          genre_count[genre] = 1
+          genre_count[x] = 1
         end
       end
       genre_count
